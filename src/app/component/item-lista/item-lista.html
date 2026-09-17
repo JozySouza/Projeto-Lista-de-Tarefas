@@ -1,0 +1,16 @@
+<p>Minhas Tarefas</p>
+<input type="text" [(ngModel)]="novatarefa" placeholder="Digite uma tarefa" [(ngModel)]="novaTarefa" />
+<button (click)="adicionarTarefa()">Adicionar</button>
+
+<div class="item" *ngFor="let item of itens">
+  
+  <p [class.riscado]="item.concluida"> <input type="checkbox" [(ngModel)]="item.concluida" />{{ item.tarefa }}</p>
+  <button (click)="removerItem(item)"> Remover</button> 
+</div>
+
+<p *ngIf="tarefasConcluidas as total; else zero">
+  tarefas Concluídas: {{ total }}
+</p>
+<ng-template #zero>
+  <p>tarefas Concluídas: 0</p>
+</ng-template>

@@ -1,0 +1,12 @@
+.riscado {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+
+.item{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+}

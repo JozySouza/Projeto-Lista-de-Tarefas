@@ -1,59 +1,74 @@
-# ListaDeTarefas
+# Lista de Tarefas
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.1.8.
+Aplicação de lista de tarefas desenvolvida com Angular 22. Ela permite adicionar tarefas, marcar tarefas como concluídas e removê-las da lista.
 
-## Development server
+## Tecnologias
 
-To start a local development server, run:
+- Angular 22
+- TypeScript
+- Angular Forms (`ngModel`)
+- Vitest para testes unitários
+- Angular SSR
 
-```bash
-ng serve
-```
+## Requisitos
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- Node.js 20 ou superior
+- npm 11 ou superior
 
-## Code scaffolding
+## Instalação
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Na pasta `lista-de-tarefas`, instale as dependências:
 
 ```bash
-ng generate --help
+npm install
 ```
 
-## Building
+## Executar localmente
 
-To build the project run:
+Inicie o servidor de desenvolvimento:
 
 ```bash
-ng build
+npm start
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+A aplicação ficará disponível em [http://localhost:4200](http://localhost:4200). O servidor usa a porta `4200` e atualiza a aplicação automaticamente quando os arquivos são alterados.
 
-## Running unit tests
+## Funcionalidades
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+- Adicionar uma nova tarefa.
+- Marcar ou desmarcar uma tarefa como concluída.
+- Remover uma tarefa.
+- Exibir a quantidade de tarefas concluídas.
+
+## Comandos disponíveis
+
+| Comando | Descrição |
+| --- | --- |
+| `npm start` | Inicia o servidor local em `localhost:4200`. |
+| `npm run build` | Gera o build de produção na pasta `dist/`. |
+| `npm run watch` | Compila em modo de observação para desenvolvimento. |
+| `npm test` | Executa os testes unitários. |
+
+## Estrutura principal
+
+```text
+src/
+	app/
+		component/
+			item-lista/  # Lista e gerenciamento das tarefas
+		app.ts         # Componente raiz
+	main.ts          # Inicialização da aplicação
+public/            # Arquivos públicos
+angular.json       # Configuração do Angular CLI
+package.json       # Dependências e scripts
+```
+
+## Build
+
+Para gerar os arquivos otimizados para produção:
 
 ```bash
-ng test
+npm run build
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Os artefatos serão gerados em `dist/lista-de-tarefas/`.
